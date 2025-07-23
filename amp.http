@@ -1,0 +1,11 @@
+POST http://20.244.56.144/evaluation-service/register
+Content-Type: application/json
+
+{
+    "email": "dangetiharshith22@ifheindia.org",
+    "name": "Dangeti Harshith Babu",
+    "mobileNo": "8790490716",
+    "githubUsername": "Harshith8244",
+    "rollNo": "22STUCHH010408",
+    "accessCode": "bCuCFT"
+}

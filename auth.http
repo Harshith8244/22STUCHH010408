@@ -1,0 +1,11 @@
+POST http://20.244.56.144/evaluation-service/auth
+Content-Type: application/json
+
+{
+    "email": "dangetiharshith22@ifheindia.org",
+    "name": "dangeti harshith babu",
+    "rollNo": "22stuchh010408",
+    "accessCode": "bCuCFT",
+    "clientID": "5dcca917-a0c7-47d4-8b3b-91daa2757c0e",
+    "clientSecret": "fZNdrbTSecEEYPNs"
+}

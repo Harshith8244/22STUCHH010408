@@ -1,0 +1,11 @@
+POST http://20.244.56.144/evaluation-service/logs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJkYW5nZXRpaGFyc2hpdGgyMkBpZmhlaW5kaWEub3JnIiwiZXhwIjoxNzUzMjU0NzM5LCJpYXQiOjE3NTMyNTM4MzksImlzcyI6IkFmZm9yZCBNZWRpY2FsIFRlY2hub2xvZ2llcyBQcml2YXRlIExpbWl0ZWQiLCJqdGkiOiI2NTI0NzQxZC04OWVkLTRlYzAtYjNmYS00ZTA3NTk1MGNmMzgiLCJsb2NhbGUiOiJlbi1JTiIsIm5hbWUiOiJkYW5nZXRpIGhhcnNoaXRoIGJhYnUiLCJzdWIiOiI1ZGNjYTkxNy1hMGM3LTQ3ZDQtOGIzYi05MWRhYTI3NTdjMGUifSwiZW1haWwiOiJkYW5nZXRpaGFyc2hpdGgyMkBpZmhlaW5kaWEub3JnIiwibmFtZSI6ImRhbmdldGkgaGFyc2hpdGggYmFidSIsInJvbGxObyI6IjIyc3R1Y2hoMDEwNDA4IiwiYWNjZXNzQ29kZSI6ImJDdUNGVCIsImNsaWVudElEIjoiNWRjY2E5MTctYTBjNy00N2Q0LThiM2ItOTFkYWEyNzU3YzBlIiwiY2xpZW50U2VjcmV0IjoiZlpOZHJiVFNlY0VFWVBOcyJ9.9xR7mtuFXDj76Ere_p2QhI5keiNe3eF4J0g_RyH6vg0
+
+{
+    
+    "stack": "frontend",
+    "level": "error",
+    "package": "api",
+    "message": "received string, expected bool"
+}
