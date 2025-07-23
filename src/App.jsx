@@ -30,26 +30,29 @@ function App() {
    * @param {Event} e - The form submission event.
    */
   function handleSubmit(e) {
-    e.preventDefault(); // Prevent default form submission
-    setError(''); // Clear any previous errors
-    setCopyMessage(''); // Clear any previous copy messages
+  e.preventDefault();
+  setError('');
+  setCopyMessage('');
 
-    // Validate the entered URL
-    if (!validateUrl(url)) {
-      setError('Please enter a valid URL (e.g., https://example.com)');
-      return;
-    }
-
-    // Generate a custom code if provided, otherwise generate a random one
-    const code = customCode.trim() || Math.random().toString(36).substring(2, 8);
-    // Construct the full shortened URL (placeholder for now, will be dynamic with backend)
-    const fullUrl = `http://localhost:5173/${code}`; // In a real app, this would come from a backend
-    setShortUrl(fullUrl); // Set the shortened URL
+  if (!validateUrl(url)) {
+    setError('Please enter a valid URL (e.g., https://example.com)');
+    return;
   }
 
-  /**
-   * Copies the shortened URL to the clipboard and displays a confirmation message.
-   */
+  const code = customCode.trim() || Math.random().toString(36).substring(2, 8);
+  const fullUrl = `${window.location.origin}/${code}`;
+
+  // Store in localStorage: key = code, value = JSON object with long URL and expiry
+  const expiration = Date.now() + validity * 60 * 1000;
+  const data = {
+    longUrl: url,
+    expiresAt: expiration,
+  };
+  localStorage.setItem(code, JSON.stringify(data));
+
+  setShortUrl(fullUrl);
+}
+
   function copyToClipboard() {
     // Use document.execCommand('copy') for better compatibility in iframe environments
     const tempInput = document.createElement('input');

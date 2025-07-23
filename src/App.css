@@ -1,17 +1,14 @@
 body {
   margin: 0;
   font-family: 'Helvetica', sans-serif;
-  background-color: #d1e8ff; /* Updated background color behind dialog */
-  height: 100vh; /* Ensure body takes full height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #f5f5f5;
 }
 
 .min-h-screen {
-  /* Since body uses flex to center, this can be simplified */
-  width: 100%;
-  max-width: 400px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
 }
 
@@ -21,10 +18,8 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 100%;
-  box-sizing: border-box; /* Ensure padding included in width */
+  max-width: 400px;
 }
-
-/* Rest of your styles unchanged */
 
 .text-2xl {
   font-size: 1.75rem;
